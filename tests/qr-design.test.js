@@ -11,6 +11,7 @@ import {
 test('accepts all suggested palettes and rejects low contrast or inverted QR colors', () => {
   for (const preset of QR_PRESETS)
     assert.equal(getQrDesignError({ ...DEFAULT_QR_DESIGN, ...preset.design }), '');
+  assert.ok(QR_PRESETS.some((preset) => preset.design.foreground === '#1075b4'));
   assert.equal(contrastRatio('#000000', '#ffffff'), 21);
   assert.match(getQrDesignError({ ...DEFAULT_QR_DESIGN, foreground: '#eeeeee' }), /tương phản/);
   assert.match(
@@ -35,4 +36,6 @@ test('handles legacy or malformed saved designs and validates label input', () =
     showBrand: false,
   };
   assert.deepEqual(normalizeQrDesign(JSON.stringify(custom)), custom);
+  const legacy = { ...custom, foreground: '#0a3566' };
+  assert.deepEqual(normalizeQrDesign(JSON.stringify(legacy)), legacy);
 });

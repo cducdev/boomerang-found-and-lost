@@ -1,12 +1,13 @@
 export const DEFAULT_QR_DESIGN = Object.freeze({
-  foreground: '#0a3566',
+  foreground: '#083860',
   background: '#ffffff',
   message: 'Nhặt được đồ? Quét mã giúp mình nhé!',
   showBrand: true,
 });
 
 export const QR_PRESETS = [
-  { name: 'Navy', design: { foreground: '#0a3566', background: '#ffffff' } },
+  { name: 'Navy', design: { foreground: '#083860', background: '#ffffff' } },
+  { name: 'Xanh dương', design: { foreground: '#1075b4', background: '#ffffff' } },
   { name: 'Tím', design: { foreground: '#2110b4', background: '#f1f4fd' } },
   { name: 'Xanh lá', design: { foreground: '#087a1b', background: '#f0fdf4' } },
   { name: 'Tối giản', design: { foreground: '#1e293b', background: '#ffffff' } },

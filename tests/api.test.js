@@ -55,7 +55,7 @@ test('owner QR flow, access isolation, persistent messages and validation', asyn
     });
     assert.equal(created.status, 201);
     const item = created.body;
-    assert.equal(item.qrDesign.foreground, '#0a3566');
+    assert.equal(item.qrDesign.foreground, '#083860');
     const publicItem = await request('/public/' + item.token);
     assert.equal(publicItem.body.ownerName, 'Minh');
     assert.equal(publicItem.body.phone, undefined);
