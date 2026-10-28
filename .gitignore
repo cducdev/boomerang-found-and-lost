@@ -1,0 +1,14 @@
+node_modules/
+dist/
+data/
+.env
+.env.*
+!.env.example
+test-results/
+playwright-report/
+*.log
+.DS_Store
+# Local project report and video materials are kept outside the source repository.
+/README.md
+/SPEC.md
+/video/
